@@ -2,7 +2,7 @@
 stuff about the app, what does it do? How to use it? Why that name?
 
 ## Documentation
-photos? built on?
+photos? built on? what gems? boostrap or something else?
 
 
 ### The Creators
