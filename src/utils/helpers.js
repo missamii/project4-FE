@@ -12,8 +12,6 @@ export default {
       method: method,
       url: url,
       data: dataObj
-    }).then(function (response) {
-      console.log(response.data);
-    });
+    })
   }
 }
