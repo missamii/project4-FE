@@ -9,19 +9,19 @@ constructor(props) {
     name: "",
     email: "",
     message: ""
-  };
+  }
 }
-  name(event) {
+  addName(event) {
     this.setState ({
       name: event.target.value
     });
   }
-  email(event) {
+  addEmail(event) {
     this.setState ({
       email: event.target.value
     });
   }
-  message(event) {
+  addMessage(event) {
     this.setState ({
       message: event.target.value
     });
@@ -32,15 +32,12 @@ constructor(props) {
       <div>
         <Header />
         <h1>Message Board</h1>
-        <div>
-          {/* maybe put a div here to contain the message output */}
-        </div>
 
         <form className="form">
-          <input placeholder="Name" className="form" onChange={(event) => this.name(event)} /> <br />
-          <input placeholder="Email" className="form" onChange={(event) => this.email(event)} /> <br />
-          <textarea placeholder="message" className="form" onChange={(event) => this.message(event)}/> <br />
-          <button onClick={(event) => this.props.add(event, this.state)}>Submit</button>
+          <input placeholder="Name" className="form" onChange={(event) => this.addName(event)} /> <br />
+          <input placeholder="Email" className="form" onChange={(event) => this.addEmail(event)} /> <br />
+          <textarea placeholder="message" className="form" onChange={(event) => this.addMessage(event)}/> <br />
+          <button onClick={(event) => this.props.add(event, this.state)}>Add a Post</button>
         </form>
 
       </div>
