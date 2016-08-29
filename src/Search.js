@@ -3,40 +3,21 @@ import { Router, Route, browserHistory } from 'react-router';
 import helpers from './utils/helpers.js';
 import axios from 'axios';
 
-class Search extends Component {
-  constructor(props){
-    super(props);
-    console.log(props);
-    this.state = {
-      searchText: "",
-      res: []
-    };
-  }
-  handleClick(event) {
-    console.log(this);
-    //this.setState({ searchText: event.target.value });
-    getAllCars()
-    .then((res) => {
-      this.setState({
-        response: res.data
-      });
-      console.log(res.data);
-    });
+class SearchResults extends Component {
+  constructor() {
+    super();
   }
 
-  handleChange(event){
-    console.log(event.target.value);
-    this.setState({
-      searchText: event.target.value
-    });
+  render() {
+    console.log(this.props.data);
+    const imgSrc = 'https://api.edmunds.com/v1/api/vehiclephoto/service/findphotosbystyleid?styleId=200477465&fmt=json&api_key=2sresewmhswymakttj4ppvnv' +this.props.data.id +'.png';
+
   }
 
   render() {
     return(
       <div className="Search">
- {//* add a test button *//}
         <button>Test</button>
-
       </div>
     )
   }
