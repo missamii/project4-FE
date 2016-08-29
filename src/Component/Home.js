@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Router, Route, browserHistory } from 'react-router';
 import { Link } from 'react-router';
 
 
@@ -9,7 +8,7 @@ class Home extends Component {
     return (
     <div>
     <h1>Welcome</h1>
-    <Link className="enter" to ="/SearchCars"> Enter!</Link>
+    <Link className="enter" to="/SearchCars"> Enter!</Link>
     </div>
     )
     }

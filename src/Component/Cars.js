@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Router, Route, browserHistory } from 'react-router';
 import helpers from '../utils/helpers.js';
-import axios from 'axios';
+// import axios from 'axios';
 
 class Cars extends Component {
   constructor(props){
