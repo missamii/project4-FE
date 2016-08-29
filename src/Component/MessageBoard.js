@@ -30,7 +30,6 @@ constructor(props) {
   render() {
     return (
       <div>
-        <Header />
         <h1>Message Board</h1>
 
         <form className="form">

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import getThis from './Helpers.js';
+import helpers from '../utils/helpers.js';
+import Header from './Header.js';
 import MessageBoard from './MessageBoard.js'
 
 
@@ -9,7 +10,7 @@ class NewPost extends Component {
   create(event, message){
     event.preventDefault();
     console.log(message);
-    getThis.addNew(message)
+    helpers.addNew(message)
     .then((res) => {
       console.log("great post");
     });
@@ -20,7 +21,8 @@ class NewPost extends Component {
   render() {
     return (
       <div>
-        <MessageBoard add={(event, message) => this.create(event, message} />
+        <Header />
+        <MessageBoard add={(event, message) => this.create(event, message)} />
       </div>
         )
       }
