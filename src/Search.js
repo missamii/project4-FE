@@ -12,12 +12,10 @@ class Search extends Component {
       res: []
     };
   }
-  handleClick(event) {
-    console.log(this);
-    //this.setState({ searchText: event.target.value });
-    getAllCars()
-    .then((res) => {
-      this.setState({
+  viewAllClick(e) {
+       helpers.getAll()
+       .then((res) => {
+        this.setState({
         response: res.data
       });
       console.log(res.data);
@@ -35,7 +33,7 @@ class Search extends Component {
     return(
       <div className="Search">
 
-        <button>Test</button>
+        <button onClick={this.viewAllClick.bind(this)}>All cars</button>
 
       </div>
     )
