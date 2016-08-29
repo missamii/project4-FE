@@ -3,7 +3,7 @@ import { Router, Route, browserHistory } from 'react-router';
 import { Link } from 'react-router';
 import Search from './Search';
 // import axios from 'axios'
-import './App.css';
+import '../App.css';
 
 
 class App extends Component {

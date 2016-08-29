@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, browserHistory } from 'react-router';
-import App from './App';
-import Search from './Search.js'
-import Home from './Home.js'
+import App from './Component/App';
+import Search from './Component/Search.js'
+import Home from './Component/Home.js'
 import './index.css';
 
 ReactDOM.render(
