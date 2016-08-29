@@ -34,7 +34,7 @@ class Search extends Component {
   render() {
     return(
       <div className="Search">
- {//* add a test button *//}
+
         <button>Test</button>
 
       </div>
