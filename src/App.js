@@ -30,7 +30,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>This page works!</h1>
-          <center><button className="button"><Link id="link" to="/search">Enter</Link></button></center>
+          <Search />
             {this.props.children}
       </div>
     );

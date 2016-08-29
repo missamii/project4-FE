@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 export default {
-  getAllCars: function(){
-    return axios.get('https://localhost:3000/cars');
+  getAll: function(){
+    return axios.post('http://localhost:3000/cars');
   }
 //   addCar: function(car){
 //     return axios.post('http://localhost:8080/', car);
