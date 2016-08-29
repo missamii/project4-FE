@@ -7,8 +7,9 @@ import '../App.css';
   class Header extends Component {
   render() {
     return (
-      <Nav></Nav>
-      
+      <div>
+      </div>
+
     )
 
   }
