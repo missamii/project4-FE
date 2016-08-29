@@ -2,6 +2,8 @@
 ---
 - [x] Rails BE
 - [x] React FE
+- [x] Routing
+- [x] Build main Component
 - [ ] deployment
 - [x] Hit API
 - [ ] Do CRUD
@@ -11,10 +13,10 @@
 |         Schedule              |
 | ------------- |:-------------:|
 | Friday        | create: BE/FE |
-| Saturday      | deployment*      |
-| Sunday        | SQL     |  
-| Monday        | 1:1's, Hit API, display to page, routes|  
+| Saturday      | deployment*   |
+| Sunday        | SQL           |  
+| Monday        | 1:1's, Hit API, display to page, routes    |  
 | Tuesday       | implement FULL CRUD|  
 | Wednesday     | CSS all DAY   |  
-| Thursday    | CSS all DAY     |  
-| Friday    | presentation!     |  
+| Thursday      | CSS all DAY   |  
+| Friday        | presentation! |  
