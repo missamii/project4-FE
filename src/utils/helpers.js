@@ -1,20 +1,19 @@
 import axios from 'axios';
 
 export default {
-  getAll: function(){
-    return axios.post('http://localhost:3000/cars');
-  }
-//   addCar: function(car){
-//     return axios.post('http://localhost:8080/', car);
-//   },
-//   findCar: function(car){
-//     return axios.get('http://localhost:8080/' + car.name);
-//   },
-//   deleteCar: function(car){
-//     return axios.delete('http://localhost:8080/' + car.name);
-//   },
-//   updateCar: function(car){
-//     return axios.put('http://localhost:8080/' + car.name, car);
-//   }
 
+  getOne: function(car){
+
+    const method = 'post';
+    const url = 'http://localhost:3000/cars';
+    const dataObj = {name: car};
+
+  return axios({
+      method: method,
+      url: url,
+      data: dataObj
+    }).then(function (response) {
+      console.log(response.data);
+    });
+  }
 }

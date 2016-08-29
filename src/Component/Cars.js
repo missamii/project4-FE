@@ -7,32 +7,32 @@ class Cars extends Component {
     super(props);
     console.log(props);
     this.state = {
-      searchText: "",
+      car: "",
       res: []
     };
   }
-  viewAllClick(e) {
-       helpers.getAll()
+  searchCar(e) {
+       helpers.getOne(this.state.car)
        .then((res) => {
         this.setState({
-        response: res.data
+        res: res
       });
-      console.log(res.data);
+      console.log(res);
     });
   }
 
   handleChange(event){
     console.log(event.target.value);
     this.setState({
-      searchText: event.target.value
+      car: event.target.value
     });
   }
 
   render() {
     return(
       <div className="Cars">
-
-        <button onClick={this.viewAllClick.bind(this)}>All cars</button>
+        <input className='input' type='text' value={this.state.car} onChange={(event) => this.handleChange(event)}></input>
+        <button onClick={this.searchCar.bind(this)}>Cars</button>
 
       </div>
     )
