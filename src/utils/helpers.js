@@ -12,8 +12,10 @@ export default {
       method: method,
       url: url,
       data: dataObj
-    }).then(function (response) {
-      console.log(response.data);
-    });
-  }
+    })
+  },
+
+  addNew: function(message) {
+  return axios.post('http://localhost:3000/message/new', message)
+},
 }

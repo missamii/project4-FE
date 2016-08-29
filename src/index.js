@@ -5,7 +5,7 @@ import App from './Component/App';
 // import Search from './Component/Search.js'
 import Home from './Component/Home.js'
 import About from './Component/About.js'
-import MessageBoard from './Component/MessageBoard.js'
+import NewPost from './Component/NewPost.js'
 import './index.css';
 
 ReactDOM.render(
@@ -14,7 +14,7 @@ ReactDOM.render(
   <Route path="/" component={Home} />
   <Route path="/SearchCars" component={App} />
   <Route path="/About" component={About} />
-  <Route path="/MessageBoard" component={MessageBoard} />
+  <Route path="/NewPost" component={NewPost} />
 
 
   </Router>
