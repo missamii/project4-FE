@@ -34,7 +34,7 @@ Thanks to Mimi Wu for helping Tiffany go about a better way to create the backen
 
 
 **Resources:**
-+ [Bootstrap](https://www.getbootstrap.com)
++ [Bootstrap](https://react-bootstrap.github.io)
 
 **Features/Code:**
 + [Ruby on Rails](http://rubyonrails.org/)

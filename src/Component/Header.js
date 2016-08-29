@@ -9,7 +9,7 @@ import '../Header.css';
       <div className="navBar">
         <Link to='/'>Home</Link>
         <Link to='/SearchCars'>Cars</Link>
-        <Link to='/MessageBoard'>Message Board</Link>
+        <Link to='/NewPost'>New Post</Link>
         <Link to='/About'>About</Link>
 
       </div>

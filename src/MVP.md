@@ -15,7 +15,7 @@
 | Friday        | create: BE/FE |
 | Saturday      | deployment*   |
 | Sunday        | SQL           |  
-| Monday        | 1:1's, Hit API, display to page, routes, build out components    |  
+| Monday        | 1:1's, Hit API, display to page, routes, build out components |  
 | Tuesday       | implement FULL CRUD|  
 | Wednesday     | CSS all DAY   |  
 | Thursday      | CSS all DAY   |  
