@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import helpers from '../utils/helpers.js';
 import Header from './Header.js';
-import MessageBoard from './MessageBoard.js'
+import MessageParts from './MessageParts.js'
 
 
 class NewPost extends Component {
@@ -22,7 +22,7 @@ class NewPost extends Component {
     return (
       <div>
         <Header />
-        <MessageBoard add={(event, message) => this.create(event, message)} />
+        <MessageParts add={(event, message) => this.create(event, message)} />
       </div>
         )
       }
