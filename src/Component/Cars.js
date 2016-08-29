@@ -15,9 +15,9 @@ class Cars extends Component {
        helpers.getOne(this.state.car)
        .then((res) => {
         this.setState({
-        res: res
+        res: res.data
       });
-      console.log(res);
+      console.log(res.data);
     });
   }
 
@@ -29,10 +29,22 @@ class Cars extends Component {
   }
 
   render() {
+    const cars = this.state.res
+    const i = 0
+    console.log(cars)
+
     return(
       <div className="Cars">
         <input className='input' type='text' value={this.state.car} onChange={(event) => this.handleChange(event)}></input>
         <button onClick={this.searchCar.bind(this)}>Cars</button>
+
+        <ol className="olStyle">
+          {cars.map(function (cars, i) {
+            return <li className="recStyle" key={i}>{cars.models}
+
+            </li>
+          })}
+        </ol>
 
       </div>
     )
