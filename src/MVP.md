@@ -3,7 +3,7 @@
 - [x] Rails BE
 - [x] React FE
 - [ ] deployment
-- [ ] Hit API
+- [x] Hit API
 - [ ] Do CRUD
 - [ ] CSS it UP
 
