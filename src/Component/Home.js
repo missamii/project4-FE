@@ -9,6 +9,7 @@ class Home extends Component {
     return (
     <div>
     <h1>Welcome</h1>
+    <Link className="enter" to ="/SearchCars"> Enter!</Link>
     </div>
     )
     }
