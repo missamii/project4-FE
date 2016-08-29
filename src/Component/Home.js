@@ -7,11 +7,11 @@ class Home extends Component {
   render() {
     return (
     <div>
-    <h1>Welcome</h1>
-    <Link className="enter" to="/SearchCars"> Enter!</Link>
+      <h1>Welcome</h1>
+      <Link className="enter" to="/SearchCars"> Enter!</Link>
     </div>
     )
-    }
+  }
 }
 
 export default Home;
