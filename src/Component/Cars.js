@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
+// import SearchCars from './SearchCars.js'
 import helpers from '../utils/helpers.js';
-// import axios from 'axios';
-import { Button } from 'react-bootstrap';
-// import { Form } from 'react-bootstrap';
-// import { Form } from 'react-bootstrap';
-// import { Form } from 'react-bootstrap';
-
 
 
 class Cars extends Component {
@@ -14,16 +9,17 @@ class Cars extends Component {
     console.log(props);
     this.state = {
       car: "",
-      res: []
+      response: []
     };
   }
   searchCar(e) {
        helpers.getOne(this.state.car)
        .then((res) => {
         this.setState({
-        res: res.data
+        response: res.data
       });
-      console.log(res.data);
+      console.log('inside serachcar funcion', this.state.res);
+
     });
   }
 
@@ -35,24 +31,26 @@ class Cars extends Component {
   }
 
   render() {
-    const cars = this.state.res
+    const cars = this.state.response
+    console.log("this:", cars)
     const i = 0
-    console.log(cars)
-
     return(
       <div className="Cars">
-        <input className="input" type="text" value={this.state.car} onChange={(event) => this.handleChange(event)} />
-        <Button className="button" bsStyle="primary" onClick={this.searchCar.bind(this)} >Shop Vehicles</Button>
-        <input className='input' type='text' value={this.state.car} onChange={(event) => this.handleChange(event)}></input>
+
         <button onClick={this.searchCar.bind(this)}>Cars</button>
+        <input className='input' type='text' onChange={this.handleChange.bind(this)}></input>
 
-        <ol className="olStyle">
-          {cars.map(function (cars, i) {
-            return <li className="recStyle" key={i}>{cars.models}
 
-            </li>
-          })}
-        </ol>
+          <ol>
+             {cars.models ?
+              cars.models.map(
+          function(car, i) {
+              return (<li className="recStyle" key={i}> {car.id} </li>)
+            })
+              :
+              null
+            }
+          </ol>
       </div>
     )
   }
