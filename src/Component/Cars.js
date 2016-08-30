@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import SearchCars from './SearchCars.js'
 import helpers from '../utils/helpers.js';
+import { Button } from 'react-bootstrap';
 
 
 class Cars extends Component {
@@ -37,7 +38,7 @@ class Cars extends Component {
     return(
       <div className="Cars">
 
-        <button onClick={this.searchCar.bind(this)}>Cars</button>
+        <button bsStyle="primary" onClick={this.searchCar.bind(this)}>Cars</button>
         <input className='input' type='text' onChange={this.handleChange.bind(this)}></input>
 
 
