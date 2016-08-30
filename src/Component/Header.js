@@ -16,10 +16,11 @@ import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
       <Nav>
         <NavItem eventKey={1} href="/">Home</NavItem>
         <NavItem eventKey={2} href="/SearchCars">Cars</NavItem>
-        <NavItem eventKey={4} href="/About">About</NavItem>
-          <NavDropdown eventKey={3} title="Message Board" id="basic-nav-dropdown">
-            <MenuItem eventKey={3.1} href="/MessageBoard">View Message Board</MenuItem>
-            <MenuItem eventKey={3.1} href="/NewPost">New Post</MenuItem>
+        <NavItem eventKey={3} href="/About">About</NavItem>
+        <NavItem eventKey={4} href="/Dealerships">Dealerships</NavItem>
+          <NavDropdown eventKey={5} title="Message Board" id="basic-nav-dropdown">
+            <MenuItem eventKey={5.1} href="/MessageBoard">View Message Board</MenuItem>
+            <MenuItem eventKey={5.2} href="/NewPost">New Post</MenuItem>
             <MenuItem divider />
           </NavDropdown>
       </Nav>
