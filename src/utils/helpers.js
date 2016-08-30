@@ -18,4 +18,16 @@ export default {
   addNew: function(message) {
   return axios.post('http://localhost:3000/message/new', message)
 },
+
+
+  getAll: function() {
+    return axios.post('http://localhost:3000/message')
+  }
+
+
 }
+
+
+
+
+

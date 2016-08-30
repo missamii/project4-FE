@@ -6,6 +6,7 @@ import App from './Component/App';
 import Home from './Component/Home.js'
 import About from './Component/About.js'
 import NewPost from './Component/NewPost.js'
+import MessageBoard from './Component/MessageBoard.js'
 import './index.css';
 
 ReactDOM.render(
@@ -15,6 +16,7 @@ ReactDOM.render(
   <Route path="/SearchCars" component={App} />
   <Route path="/About" component={About} />
   <Route path="/NewPost" component={NewPost} />
+  <Route path="/MessageBoard" component={MessageBoard} />
 
 
   </Router>
