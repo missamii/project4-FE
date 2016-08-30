@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // import SearchCars from './SearchCars.js'
 import helpers from '../utils/helpers.js';
 import { Button } from 'react-bootstrap';
+import '../Cars.css'
 
 
 class Cars extends Component {
