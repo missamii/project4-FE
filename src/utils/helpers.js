@@ -11,7 +11,20 @@ export default {
   return axios({
       method: method,
       url: url,
-      data: dataObj
+      data: dataObj,
+    })
+  },
+
+    getThis: function(car){
+
+    const method = 'post';
+    const url = 'http://localhost:3000/dealerships';
+    const dataObj = {name: car};
+
+  return axios({
+      method: method,
+      url: url,
+      data: dataObj,
     })
   },
 
