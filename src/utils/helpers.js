@@ -11,7 +11,7 @@ export default {
   return axios({
       method: method,
       url: url,
-      data: dataObj
+      data: dataObj,
     })
   },
 

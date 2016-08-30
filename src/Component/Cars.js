@@ -17,7 +17,9 @@ class Cars extends Component {
   searchCar(e) {
        helpers.getOne(this.state.car)
        .then((res) => {
+        // const cleanData = res.data.introduction.replace(/<\/?[^>]+>/gi, '');
         this.setState({
+        // response: res.data.introduction.replace(/<\/?[^>]+>/gi, '')
         response: res.data
       });
       console.log('inside serachcar funcion', this.state.response);
@@ -43,11 +45,15 @@ class Cars extends Component {
         <input className='input' type='text' onChange={this.handleChange.bind(this)}></input>
 
           <div>
-          {cars.description}
+            <p>{cars.title ? cars.title : null}</p>
           </div>
           <div>
-          {cars.introduction}
+            <p>{cars.introduction ? cars.introduction.replace(/<\/?[^>]+>/gi, '') : null}</p>
           </div>
+          <div>
+            <p>{cars.link ? cars.link.href : null}</p>
+          </div>
+
           <ol>
              {cars.models ?
               cars.models.map(
