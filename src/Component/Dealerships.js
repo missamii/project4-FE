@@ -17,7 +17,7 @@ class Dealerships extends Component {
     };
   }
   searchDealers(e) {
-       helpers.getThis(this.state.zipcode)
+       helpers.getThis(this.state.zipcode, this.state.car)
        .then((res) => {
         this.setState({
         response: res.data
@@ -53,9 +53,16 @@ class Dealerships extends Component {
         <input className='input' type='text' placeholder='zipcode' onChange={this.handleChangeZip.bind(this)}></input>
         <Button bsStyle="primary" onClick={this.searchDealers.bind(this)}>Dealerships</Button>
 
-
-
-
+        <ol>
+        {dealerships.franchises ?
+          dealerships.franchises.map(
+            function(dealerships, i) {
+              return <div className="dealer" key={i}> {dealerships.name} <br /> {dealerships.address.city} <br /> {dealerships.address.county}</div>
+            })
+              :
+              null
+            }
+          </ol>
       </div>
     )
   }
