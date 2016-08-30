@@ -29,6 +29,16 @@ class MessageBoard extends Component {
         <Header />
 
         <button onClick={this.viewAllClick.bind(this)}>All Posts</button>
+
+          <ol className="olStyle">
+          {post.map(function (post, index) {
+            return <li className="messageStyle" key={index}>{post.name}<br></br> {post.email} <br></br> {post.message}
+              <br></br>
+            </li>
+          })}
+        </ol>
+
+
       </div>
     );
   }
