@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import helpers from '../utils/helpers.js'
 import Header from './Header.js';
+import { Button } from 'react-bootstrap';
+
 
 class MessageBoard extends Component {
     constructor(props){
@@ -28,7 +30,7 @@ class MessageBoard extends Component {
       <div className="main">
         <Header />
 
-        <button onClick={this.viewAllClick.bind(this)}>All Posts</button>
+        <Button onClick={this.viewAllClick.bind(this)}>All Posts</Button>
       </div>
     );
   }
