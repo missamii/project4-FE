@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // import SearchCars from './SearchCars.js'
 import helpers from '../utils/helpers.js';
 import { Button } from 'react-bootstrap';
+import '../Cars.css'
 
 
 class Cars extends Component {
@@ -16,10 +17,12 @@ class Cars extends Component {
   searchCar(e) {
        helpers.getOne(this.state.car)
        .then((res) => {
+        // const cleanData = res.data.introduction.replace(/<\/?[^>]+>/gi, '');
         this.setState({
+        // response: res.data.introduction.replace(/<\/?[^>]+>/gi, '')
         response: res.data
       });
-      console.log('inside serachcar funcion', this.state.res);
+      console.log('inside serachcar funcion', this.state.response);
 
     });
   }
@@ -38,16 +41,26 @@ class Cars extends Component {
     return(
       <div className="Cars">
 
+
         <input className='input' type='text' onChange={this.handleChange.bind(this)}></input>
         <Button bsStyle="primary" onClick={this.searchCar.bind(this)}>Cars</Button>
 
 
+          <div>
+            <p>{cars.title ? cars.title : null}</p>
+          </div>
+          <div>
+            <p>{cars.introduction ? cars.introduction.replace(/<\/?[^>]+>/gi, '') : null}</p>
+          </div>
+          <div>
+            <p>{cars.link ? cars.link.href : null}</p>
+          </div>
 
           <ol>
              {cars.models ?
               cars.models.map(
-          function(car, i) {
-              return (<li className="recStyle" key={i}> {car.id} </li>)
+          function(cars, i) {
+              return <div className="recStyle" key={i}> {cars.name} </div>
             })
               :
               null
