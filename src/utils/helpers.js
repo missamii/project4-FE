@@ -34,7 +34,7 @@ export default {
 
 
   getAll: function() {
-    return axios.post('http://localhost:3000/message')
+    return axios.get('http://localhost:3000/messages')
   }
 
 
