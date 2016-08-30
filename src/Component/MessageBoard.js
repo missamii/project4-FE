@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import helpers from '../utils/helpers.js'
 import Header from './Header.js';
+
 class MessageBoard extends Component {
 
   //   viewAllClick(e) {
