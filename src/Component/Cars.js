@@ -22,7 +22,7 @@ class Cars extends Component {
         // response: res.data.introduction.replace(/<\/?[^>]+>/gi, '')
         response: res.data
       });
-      console.log('inside serachcar funcion', this.state.res);
+      console.log('inside serachcar funcion', this.state.response);
 
     });
   }
@@ -41,9 +41,9 @@ class Cars extends Component {
     return(
       <div className="Cars">
 
+
         <input className='input' type='text' onChange={this.handleChange.bind(this)}></input>
         <Button bsStyle="primary" onClick={this.searchCar.bind(this)}>Cars</Button>
-
 
 
           <div>
@@ -59,8 +59,8 @@ class Cars extends Component {
           <ol>
              {cars.models ?
               cars.models.map(
-          function(car, i) {
-              return (<li className="recStyle" key={i}> {car.id} </li>)
+          function(cars, i) {
+              return <div className="recStyle" key={i}> {cars.name} </div>
             })
               :
               null
