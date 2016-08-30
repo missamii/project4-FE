@@ -45,7 +45,7 @@ class Cars extends Component {
              {cars.models ?
               cars.models.map(
           function(car, i) {
-              return (<li className="recStyle" key={i}> {car.id} </li>)
+              return (<li className="recStyle" key={i}> {car.name} </li>)
             })
               :
               null
