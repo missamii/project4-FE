@@ -35,14 +35,18 @@ constructor(props) {
     return (
       <div>
         <h1>Message Board</h1>
-        
-        <form>
-          <FieldGroup id="formControlsText" type="text" placeholder="Name" className="form" onChange={(event) => this.addName(event)} />
 
-          <FieldGroup id="formControlsEmail" type="email" placeholder="Email" className="form" onChange={(event) => this.addEmail(event)} />
+        <form>
+          <FormGroup controlId="formControlsText">
+          <FormControl onChange={(event) => this.addName(event)} />
+          </FormGroup>
+
+          <FormGroup controlId="formControlsEmail">
+          <FormControl onChange={(event) => this.addEmail(event)} />
+          </FormGroup>
 
           <FormGroup controlId="formControlsTextarea">
-            <FormControl componentClass="textarea" placeholder="message" className="form" onChange={(event) => this.addMessage(event)} />
+            <FormControl componentClass="textarea" onChange={(event) => this.addMessage(event)} />
           </FormGroup>
 
           <Button className="danger" onClick={(event) => this.props.add(event, this.state)}>Add a Post</Button>
