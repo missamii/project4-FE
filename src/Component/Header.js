@@ -21,7 +21,6 @@ import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
           <NavDropdown eventKey={5} title="Message Board" id="basic-nav-dropdown">
             <MenuItem eventKey={5.1} href="/MessageBoard">View Message Board</MenuItem>
             <MenuItem eventKey={5.2} href="/NewPost">New Post</MenuItem>
-            <MenuItem divider />
           </NavDropdown>
       </Nav>
     </Navbar>
