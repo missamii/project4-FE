@@ -38,8 +38,9 @@ class Cars extends Component {
     return(
       <div className="Cars">
 
-        <button bsStyle="primary" onClick={this.searchCar.bind(this)}>Cars</button>
         <input className='input' type='text' onChange={this.handleChange.bind(this)}></input>
+        <Button bsStyle="primary" onClick={this.searchCar.bind(this)}>Cars</Button>
+
 
 
           <ol>
