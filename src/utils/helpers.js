@@ -15,11 +15,11 @@ export default {
     })
   },
 
-    getThis: function(car, zipcode){
+    getThis: function(zipcode, car){
 
     const method = 'post';
     const url = 'http://localhost:3000/dealerships';
-    const dataObj = {name: car, name: zipcode};
+    const dataObj = {zipcode: zipcode, make: car};
 
   return axios({
       method: method,
