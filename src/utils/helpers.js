@@ -15,6 +15,19 @@ export default {
     })
   },
 
+    getThis: function(car){
+
+    const method = 'post';
+    const url = 'http://localhost:3000/dealerships';
+    const dataObj = {name: car};
+
+  return axios({
+      method: method,
+      url: url,
+      data: dataObj,
+    })
+  },
+
   addNew: function(message) {
   return axios.post('http://localhost:3000/message/new', message)
 },
