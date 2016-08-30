@@ -15,11 +15,11 @@ export default {
     })
   },
 
-    getThis: function(car){
+    getThis: function(car, zipcode){
 
     const method = 'post';
     const url = 'http://localhost:3000/dealerships';
-    const dataObj = {name: car};
+    const dataObj = {name: car, name: zipcode};
 
   return axios({
       method: method,
@@ -34,7 +34,7 @@ export default {
 
 
   getAll: function() {
-    return axios.post('http://localhost:3000/message')
+    return axios.get('http://localhost:3000/messages')
   }
 
 

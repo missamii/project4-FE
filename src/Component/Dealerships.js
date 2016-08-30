@@ -12,11 +12,12 @@ class Dealerships extends Component {
     console.log(props);
     this.state = {
       car: "",
+      zipcode: "",
       response: []
     };
   }
   searchDealers(e) {
-       helpers.getThis(this.state.car)
+       helpers.getThis(this.state.zipcode)
        .then((res) => {
         this.setState({
         response: res.data
@@ -26,24 +27,33 @@ class Dealerships extends Component {
     });
   }
 
-  handleChange(event){
+  handleChangeCar(event){
     console.log(event.target.value);
     this.setState({
       car: event.target.value
     });
   }
 
+    handleChangeZip(event){
+    console.log(event.target.value);
+    this.setState({
+      zipcode: event.target.value
+    });
+  }
+
+
   render() {
-    const cars = this.state.response
-    console.log("this:", cars)
+    const dealerships = this.state.response
     const i = 0
     return(
       <div className="Dealerships">
       <Header />
 
-        <input className='input' type='text' placeHolder='make' onChange={this.handleChange.bind(this)}></input>
-        <input className='input' type='text' placeHolder='zipcode' onChange={this.handleChange.bind(this)}></input>
+        <input className='input' type='text' placeholder='make' onChange={this.handleChangeCar.bind(this)}></input>
+        <input className='input' type='text' placeholder='zipcode' onChange={this.handleChangeZip.bind(this)}></input>
         <Button bsStyle="primary" onClick={this.searchDealers.bind(this)}>Dealerships</Button>
+
+
 
 
       </div>
