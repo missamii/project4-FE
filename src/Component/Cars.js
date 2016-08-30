@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // import SearchCars from './SearchCars.js'
 import helpers from '../utils/helpers.js';
 import { Button } from 'react-bootstrap';
+import '../Cars.css'
 
 
 class Cars extends Component {
@@ -19,7 +20,7 @@ class Cars extends Component {
         this.setState({
         response: res.data
       });
-      console.log('inside serachcar funcion', this.state.res);
+      console.log('inside serachcar funcion', this.state.response);
 
     });
   }
@@ -38,15 +39,20 @@ class Cars extends Component {
     return(
       <div className="Cars">
 
-        <button bsStyle="primary" onClick={this.searchCar.bind(this)}>Cars</button>
+        <Button bsStyle="primary" onClick={this.searchCar.bind(this)}>Cars</Button>
         <input className='input' type='text' onChange={this.handleChange.bind(this)}></input>
 
-
+          <div>
+          {cars.description}
+          </div>
+          <div>
+          {cars.introduction}
+          </div>
           <ol>
              {cars.models ?
               cars.models.map(
-          function(car, i) {
-              return (<li className="recStyle" key={i}> {car.name} </li>)
+          function(cars, i) {
+              return <div className="recStyle" key={i}> {cars.name} </div>
             })
               :
               null
