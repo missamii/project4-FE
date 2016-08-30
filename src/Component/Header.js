@@ -10,7 +10,7 @@ import { Navbar, Nav, NavItem } from 'react-bootstrap';
       <Navbar inverse>
         <Navbar.Header>
           <Navbar.Brand>
-            <a href="/">[NAME of APP]</a>
+            <a href="/">[APP NAME]</a>
           </Navbar.Brand>
         </Navbar.Header>
       <Nav>
