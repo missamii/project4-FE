@@ -1,0 +1,13 @@
+.recStyle {
+  text-align: center;
+  height: 99px;
+  width: 99px;
+  display: inline-flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: white;
+  color: black;
+  margin: 3px;
+  border: 2px solid blue;
+  border-radius: 5px;
+}
