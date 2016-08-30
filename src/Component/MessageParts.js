@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header.js';
 import { Button } from 'react-bootstrap';
-import { FormGroup, FormControl, FieldGroup } from 'react-bootstrap';
-
+import { FormGroup, FormControl, FieldGroup, Form } from 'react-bootstrap';
 
 
 class MessageBoard extends Component {
@@ -13,7 +12,7 @@ constructor(props) {
     name: "",
     email: "",
     message: ""
-  }
+  };
 }
   addName(event) {
     this.setState ({
@@ -37,19 +36,22 @@ constructor(props) {
         <h1>Message Board</h1>
 
         <form>
-          <FormGroup controlId="formControlsText">
-          <FormControl onChange={(event) => this.addName(event)} />
+
+          <FormGroup controlId="formControlsTextarea">
+
+          <FormControl placeholder="Name" onChange={(event) => this.addName(event)} />
+
           </FormGroup>
 
           <FormGroup controlId="formControlsEmail">
-          <FormControl onChange={(event) => this.addEmail(event)} />
+          <FormControl placeholder="Email" onChange={(event) => this.addEmail(event)} />
           </FormGroup>
 
           <FormGroup controlId="formControlsTextarea">
-            <FormControl componentClass="textarea" onChange={(event) => this.addMessage(event)} />
+            <FormControl placeholder="Message" componentClass="textarea" onChange={(event) => this.addMessage(event)} />
           </FormGroup>
 
-          <Button className="danger" onClick={(event) => this.props.add(event, this.state)}>Add a Post</Button>
+          <Button bsStyle="danger" onClick={(event) => this.props.add(event, this.state)}>Add a Post</Button>
         </form>
 
       </div>
