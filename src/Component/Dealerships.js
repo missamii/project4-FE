@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // import SearchCars from './SearchCars.js'
 import helpers from '../utils/helpers.js';
 import { Button } from 'react-bootstrap';
+import Header from './Header.js'
 import '../Cars.css'
 
 
@@ -14,8 +15,8 @@ class Dealerships extends Component {
       response: []
     };
   }
-  searchCar(e) {
-       helpers.getOne(this.state.car)
+  searchDealers(e) {
+       helpers.getThis(this.state.car)
        .then((res) => {
         this.setState({
         response: res.data
@@ -38,9 +39,12 @@ class Dealerships extends Component {
     const i = 0
     return(
       <div className="Dealerships">
+      <Header />
 
-        <Button bsStyle="primary" onClick={this.searchCar.bind(this)}>Cars</Button>
-        <input className='input' type='text' onChange={this.handleChange.bind(this)}></input>
+        <input className='input' type='text' placeHolder='make' onChange={this.handleChange.bind(this)}></input>
+        <input className='input' type='text' placeHolder='zipcode' onChange={this.handleChange.bind(this)}></input>
+        <Button bsStyle="primary" onClick={this.searchDealers.bind(this)}>Dealerships</Button>
+
 
       </div>
     )
