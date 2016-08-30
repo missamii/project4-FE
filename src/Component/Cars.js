@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 // import SearchCars from './SearchCars.js'
 import helpers from '../utils/helpers.js';
 import { Button } from 'react-bootstrap';
-import '../Cars.css'
 
 
 class Cars extends Component {
@@ -22,7 +21,7 @@ class Cars extends Component {
         // response: res.data.introduction.replace(/<\/?[^>]+>/gi, '')
         response: res.data
       });
-      console.log('inside serachcar funcion', this.state.response);
+      console.log('inside serachcar funcion', this.state.res);
 
     });
   }
@@ -41,8 +40,10 @@ class Cars extends Component {
     return(
       <div className="Cars">
 
-        <Button bsStyle="primary" onClick={this.searchCar.bind(this)}>Cars</Button>
         <input className='input' type='text' onChange={this.handleChange.bind(this)}></input>
+        <Button bsStyle="primary" onClick={this.searchCar.bind(this)}>Cars</Button>
+
+
 
           <div>
             <p>{cars.title ? cars.title : null}</p>
@@ -57,8 +58,8 @@ class Cars extends Component {
           <ol>
              {cars.models ?
               cars.models.map(
-          function(cars, i) {
-              return <div className="recStyle" key={i}> {cars.name} </div>
+          function(car, i) {
+              return (<li className="recStyle" key={i}> {car.id} </li>)
             })
               :
               null
