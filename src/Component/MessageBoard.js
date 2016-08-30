@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import helpers from '../utils/helpers.js'
 import Header from './Header.js';
+import { Button } from 'react-bootstrap';
+
 
 class MessageBoard extends Component {
     constructor(props){
@@ -37,6 +39,7 @@ class MessageBoard extends Component {
             </li>
           })}
         </ol>
+
 
 
       </div>
