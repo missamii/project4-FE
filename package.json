@@ -6,6 +6,10 @@
     "react-scripts": "0.2.3"
   },
   "main": "server.js",
+  "engines": {
+    "node": "6.4.0",
+    "npm": "3.10.3"
+  },
   "dependencies": {
     "axios": "^0.14.0",
     "body-parser": "^1.15.2",
