@@ -35,12 +35,12 @@ export default {
 
   getAll: function() {
     return axios.get('http://localhost:3000/messages')
-  }
+  },
+
+  delete: function(id) {
+  console.log(id.post.id);
+  return axios.delete('http://localhost:3000/messages/' + id.post.id)
+},
 
 
 }
-
-
-
-
-

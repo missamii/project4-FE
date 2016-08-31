@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Header.js';
-// import { Button } from 'react-bootstrap';
-import { FormGroup, FormControl, FieldGroup, Form, Button } from 'react-bootstrap';
+import { FormGroup, FormControl, FieldGroup, Form, Button, InputGroup } from 'react-bootstrap';
 
 
 class MessageBoard extends Component {
@@ -45,8 +44,11 @@ constructor(props) {
             <FormControl placeholder="Name" onChange={(event) => this.addName(event)} />
           </FormGroup>
 
-          <FormGroup controlId="formControlsEmail">
-            <FormControl placeholder="Email" onChange={(event) => this.addEmail(event)} />
+          <FormGroup>
+            <InputGroup>
+              <InputGroup.Addon>@</InputGroup.Addon>
+              <FormControl type="text" onChange={(event) => this.addEmail(event)}/>
+            </InputGroup>
           </FormGroup>
 
           <FormGroup id="formControlsFile">
