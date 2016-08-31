@@ -5,63 +5,76 @@ import { FormGroup, FormControl, FieldGroup, Form, Button, InputGroup } from 're
 
 
 class UpdatePost extends Component {
-  constructor () {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       name: "",
-      email: "",
-      message:""
+      newName: "",
+      newEmail: "",
+      newMessage:""
     };
   }
 
-  handleName(event) {
+  handleOldName(event) {
+    this.setState({
+      name: event.target.value
+    })
+  }
+
+
+  handleNewName(event) {
       this.setState({
-        name: event.target.value
+        newName: event.target.value
       });
     }
 
-  handleEmail(event){
+  handleNewEmail(event){
     this.setState({
-      email: event.target.value
+      newEmail: event.target.value
     });
   }
 
-  handleMessage(event){
+  handleNewMessage(event){
     this.setState({
-      message: event.target.value
+      newMessage: event.target.value
     });
   }
 
-  handleUpdatedPost(event) {
-    event.preventdefault();
+  handleUpdatedPost() {
     console.log(this.state);
-    //to finish handle for backend
-    //make a route for UpdatePost to get rid of console error
+    //name: this.state.name,
+    const data = {newName: this.state.newName, email: this.state.newEmail, message: this.state.newMessage}
+    helpers.update(this.state.name, data).then((res => {
+      console.log("updated", res);
+    }));
   }
 
   render() {
-    const updates = this.state.response;
+    const updates = this.state;
     console.log(updates);
     return(
       <div className="UpdatePost">
-        <Header />
-          <form onSubmit={this.handlePost.bind(this)}>
+          <form>
+           <FormGroup controlId="formControlsText">
+              <FormControl placeholder="Existing Name" onChange={this.handleOldName.bind(this)} />
+            </FormGroup>
+
             <FormGroup controlId="formControlsText">
-              <FormControl placeholder="New Name" onChange={this.handleUpdate.bind(this)} />
+              <FormControl placeholder="New Name" onChange={this.handleNewName.bind(this)} />
             </FormGroup>
 
             <FormGroup>
               <InputGroup>
                 <InputGroup.Addon>@</InputGroup.Addon>
-                <FormControl type="text" />
+                <FormControl type="text" onChange={this.handleNewEmail.bind(this)} />
               </InputGroup>
             </FormGroup>
 
             <FormGroup controlId="formControlsTextarea">
-              <FormControl placeholder="Message" componentClass="textarea" onChange={(event) => this.addMessage(event)} />
+              <FormControl placeholder="Message" componentClass="textarea" onChange={this.handleNewMessage.bind(this)} />
             </FormGroup>
 
-            <Button bsStyle="danger" onClick={(event) => this.props.add(event, this.state)}>Add a Post</Button>
+            <Button bsStyle="danger" onClick={(event) => this.handleUpdatedPost(event)}>Update Post</Button>
           </form>
       </div>
     )

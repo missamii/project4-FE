@@ -42,5 +42,26 @@ export default {
   return axios.delete('http://localhost:3000/messages/' + id.post.id)
 },
 
+  // update: function(name, post){
+
+  //    const fetchSettings = {
+  //      method: 'PUT',
+  //      mode: 'cors',
+  //      body: {
+  //        name: post.name,
+  //        newName: post.newName,
+  //        newEmail: post.newEmail,
+  //        newMessage: post.newMessage
+  //      }
+  //    }
+  //    console.log(fetchSettings);
+  //    return fetch('http://localhost:3000/messages/'+ post.name, fetchSettings).then((res) => {
+  //      return res.json();
+  //    });
+  // }
+
+  update: function(name, data) {
+    return axios.put('http://localhost:3000/messages/'+ name, data)
+  }
 
 }

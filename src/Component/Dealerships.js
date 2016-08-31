@@ -48,11 +48,11 @@ class Dealerships extends Component {
     return(
       <div className="Dealerships">
       <Header />
-
-        <input className='input' type='text' placeholder='make' onChange={this.handleChangeCar.bind(this)}></input>
-        <input className='input' type='text' placeholder='zipcode' onChange={this.handleChangeZip.bind(this)}></input>
-        <Button bsStyle="primary" onClick={this.searchDealers.bind(this)}>Dealerships</Button>
-
+        <div className="inputboxes">
+          <input className='input' type='text' placeholder='make' onChange={this.handleChangeCar.bind(this)}></input> &nbsp;
+          <input className='input' type='text' placeholder='zipcode' onChange={this.handleChangeZip.bind(this)}></input> &nbsp;
+          <Button bsStyle="primary" bsSize="small" onClick={this.searchDealers.bind(this)}>Dealerships</Button>
+        </div>
         <ol>
         {dealerships.franchises ?
           dealerships.franchises.map(

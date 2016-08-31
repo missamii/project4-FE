@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import SearchCars from './SearchCars.js'
 import helpers from '../utils/helpers.js';
-import { Button } from 'react-bootstrap';
+import { Button, Row, Grid, Col, Panel, PanelGroup, title, Form } from 'react-bootstrap';
 import '../Cars.css'
 
 
@@ -36,27 +36,30 @@ class Cars extends Component {
 
   render() {
     const cars = this.state.response
-    console.log("this:", cars)
+    console.log("this:", cars);
     const i = 0
     return(
-      <div className="Cars">
+    <div className="Cars">
 
+    <div className="input">
+      <Form inline>
+        <input type="text" onChange={this.handleChange.bind(this)}></input> &nbsp;
+        <Button bsStyle="primary" bsSize="small" className="button" onClick={this.searchCar.bind(this)}>Cars</Button>
+      </Form>
+    </div>
+            <br />   <br />   <br />   <br />
 
-        <input className='input' type='text' onChange={this.handleChange.bind(this)}></input>
-        <Button bsStyle="primary" onClick={this.searchCar.bind(this)}>Cars</Button>
+          <PanelGroup defaultActiveKey="2" accordion>
 
+            <Panel header={cars.title ? cars.title : null} eventKey="1">
+              {cars.introduction ? cars.introduction.replace(/<\/?[^>]+>/gi, '') : null}
+            </Panel>
 
-          <div>
-            <p>{cars.title ? cars.title : null}</p>
-          </div>
-          <div>
-            <p>{cars.introduction ? cars.introduction.replace(/<\/?[^>]+>/gi, '') : null}</p>
-          </div>
-          <div>
-            <p>{cars.link ? cars.link.href : null}</p>
-          </div>
+            <Panel header={cars.link ? cars.link.href : null}>
+            </Panel>
 
-          <ol>
+          </PanelGroup>
+
              {cars.models ?
               cars.models.map(
           function(cars, i) {
@@ -65,8 +68,7 @@ class Cars extends Component {
               :
               null
             }
-          </ol>
-      </div>
+    </div>
     )
   }
 }

@@ -1,3 +1,8 @@
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
 .iframe {
   border-radius: 10px;
   margin: 0 auto;
