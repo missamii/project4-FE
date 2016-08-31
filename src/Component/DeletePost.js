@@ -4,22 +4,25 @@ import helpers from '../utils/helpers.js';
 
 
 class DeletePost extends Component {
-  constructor () {
-    super();
-    this.state = {
-      name: "",
-      email: "",
-      message:""
-    };
+  constructor(props) {
+    super(props);
   }
-  handleDelete(event){
-  //get the delete
-  }
+    handleDelete(event) {
+      console.log(this.props)
+      helpers.delete(this.props).then((res) => {
+        // this.setState({
+      //     response: res.data
+      //   });
+      // console.log(res.data);
+      })
+    }
 
   render() {
     return(
       <div className="DeletePost">
-        <Header />
+
+      <button  onClick={(event)=>this.handleDelete(event)}>Delete</button>
+
       </div>
     )
   }
