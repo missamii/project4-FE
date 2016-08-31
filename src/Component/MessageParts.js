@@ -47,7 +47,7 @@ constructor(props) {
           <FormGroup>
             <InputGroup>
               <InputGroup.Addon>@</InputGroup.Addon>
-              <FormControl type="text" />
+              <FormControl type="text" onChange={(event) => this.addEmail(event)}/>
             </InputGroup>
           </FormGroup>
 

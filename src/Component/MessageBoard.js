@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import helpers from '../utils/helpers.js'
 import Header from './Header.js';
 import { Button } from 'react-bootstrap';
+import DeletePost from './DeletePost.js'
 
 
 class MessageBoard extends Component {
@@ -36,8 +37,11 @@ class MessageBoard extends Component {
           {post.map(function (post, index) {
             return <li className="messageStyle" key={index}>{post.name}<br></br> {post.email} <br></br> {post.message}
               <br></br>
+              <DeletePost post={post} />
             </li>
+
           })}
+
         </ol>
 
 
