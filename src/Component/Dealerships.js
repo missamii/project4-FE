@@ -49,19 +49,24 @@ class Dealerships extends Component {
       <div className="Dealerships">
       <Header />
         <div className="inputboxes">
+
           <input className='input' type='text' placeholder='make' onChange={this.handleChangeCar.bind(this)}></input> &nbsp;
           <input className='input' type='text' placeholder='zipcode' onChange={this.handleChangeZip.bind(this)}></input> &nbsp;
           <Button bsStyle="primary" bsSize="small" onClick={this.searchDealers.bind(this)}>Dealerships</Button>
+
         </div>
         <ol>
         {dealerships.franchises ?
           dealerships.franchises.map(
             function(dealerships, i) {
-              return <div className="dealer" key={i}> {dealerships.name} <br /> {dealerships.address.city} <br /> {dealerships.address.county}</div>
+              return <div className="dealer" key={i}> {dealerships.name} <br />
+              {dealerships.address.street} <br />
+            {dealerships.address.city} <br /> {dealerships.address.county} <br /> {dealerships.address.zipcode} <br /> {dealerships.address.stateCode} <br /> <br /> </div>
             })
               :
               null
             }
+
           </ol>
       </div>
     )
