@@ -1,7 +1,7 @@
 import React, { Component } from  'react';
 import Header from './Header.js'
 import helpers from '../utils/helpers.js';
-import { FormGroup, FormControl, FieldGroup, Form, Button, InputGroup } from 'react-bootstrap';
+import { FormGroup, FormControl, FieldGroup, Form, Button, InputGroup, Modal } from 'react-bootstrap';
 
 
 class UpdatePost extends Component {
@@ -49,11 +49,20 @@ class UpdatePost extends Component {
     }));
   }
 
+
+  getInitialState() {
+    return { show: false };
+ }
+
   render() {
     const updates = this.state;
     console.log(updates);
+    let close = () => this.setState({ show: false});
     return(
-      <div className="UpdatePost">
+      <div className="model-container" sytle={{height: 200}} >
+        <Button
+          bsStyle="primary" bsSize="large" onClick={() => this.setState({ show: true})}>Edit Post</Button>
+          <Modal show={this.state.show} onHide={close} container={this} aria-labelledby="contained-modal-title">
           <form>
            <FormGroup controlId="formControlsText">
               <FormControl placeholder="Existing Name" onChange={this.handleOldName.bind(this)} />
@@ -76,6 +85,11 @@ class UpdatePost extends Component {
 
             <Button bsStyle="danger" onClick={(event) => this.handleUpdatedPost(event)}>Update Post</Button>
           </form>
+          <Modal.Footer>
+          <Button onClick={close}>Close</Button>
+          </Modal.Footer>
+        </Modal>
+
       </div>
     )
   }
