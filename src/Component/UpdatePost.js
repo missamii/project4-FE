@@ -35,9 +35,12 @@ class UpdatePost extends Component {
   handleUpdatedPost(event) {
     event.preventdefault();
     console.log(this.state);
+    getUpdate.update(this.state).then((res => {
+      console.log("updated", res);
+    }));
+  }
     //to finish handle for backend
     //make a route for UpdatePost to get rid of console error
-  }
 
   render() {
     const updates = this.state.response;
@@ -45,20 +48,20 @@ class UpdatePost extends Component {
     return(
       <div className="UpdatePost">
         <Header />
-          <form onSubmit={this.handlePost.bind(this)}>
+          <form onSubmit={this.handleUpdatedPost.bind(this)}>
             <FormGroup controlId="formControlsText">
-              <FormControl placeholder="New Name" onChange={this.handleUpdate.bind(this)} />
+              <FormControl placeholder="New Name" onChange={this.handleName.bind(this)} />
             </FormGroup>
 
             <FormGroup>
               <InputGroup>
                 <InputGroup.Addon>@</InputGroup.Addon>
-                <FormControl type="text" />
+                <FormControl type="text" onChange={this.handleEmail.bind(this)} />
               </InputGroup>
             </FormGroup>
 
             <FormGroup controlId="formControlsTextarea">
-              <FormControl placeholder="Message" componentClass="textarea" onChange={(event) => this.addMessage(event)} />
+              <FormControl placeholder="Message" componentClass="textarea" onChange={this.handleMessage.bind(this)} />
             </FormGroup>
 
             <Button bsStyle="danger" onClick={(event) => this.props.add(event, this.state)}>Add a Post</Button>
