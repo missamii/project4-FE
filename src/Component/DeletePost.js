@@ -13,7 +13,7 @@ class DeletePost extends Component {
     };
   }
   handleDelete(event){
-  //get the delete
+
   }
 
   render() {
