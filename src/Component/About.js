@@ -7,7 +7,7 @@ class About extends Component {
     return (
       <div>
         <Header />
-        <h1>About [Name of App here]</h1>
+        <h1>About [Name of App here]nsdflkjnmsdfnksn</h1>
         {/* started on the about page, will need to add pictures of creators, and so */}
           <p>
             This App out of many, was created for our final project. We wanted to make car shopping easier and more relaxed. This App brings your current and relevant information about the car of your dreams. You can shop different dealerships near you, find a vehicle by the make, model, year or the reviews. Use Reviews to find out what other people are saying about a particular vehicle or the best dealership to shop.
