@@ -14,8 +14,19 @@
   border-radius: 20px;
 }
 .inputboxes {
+  padding-top: 20px;
   display: block;
   margin: auto;
   text-align: center;
+  padding-bottom: 60px;
 }
 
+.dealer {
+  display: inline-block;
+  padding: 20px;
+  width: 270px;
+  height: 200px;
+  margin-top: 10px;
+  margin: 0 auto;
+  margin-left: 40px;
+}

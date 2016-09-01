@@ -50,26 +50,26 @@ class Dealerships extends Component {
       <Header />
         <div className="inputboxes">
 
-          <input className='input' type='text' placeholder='make' onChange={this.handleChangeCar.bind(this)}></input> &nbsp;
-          <input className='input' type='text' placeholder='zipcode' onChange={this.handleChangeZip.bind(this)}></input> &nbsp;
+          <input type='text' placeholder='make' onChange={this.handleChangeCar.bind(this)}></input> &nbsp;
+          <input type='text' placeholder='zipcode' onChange={this.handleChangeZip.bind(this)}></input> &nbsp;
           <Button bsStyle="primary" bsSize="small" onClick={this.searchDealers.bind(this)}>Dealerships</Button>
           <br />
         </div>
 
-      <Accordion>
-        {dealerships.franchises ?
-          dealerships.franchises.map(
-            function(dealerships, i) {
-              return <div className="dealer" key={i}> <Panel header={dealerships.name} eventKey="1" bsStyle="primary">
-            <b>Address:</b> <br />
-            {dealerships.address.street}<br />
-            {dealerships.address.city} <br /> {dealerships.address.county} <br /> {dealerships.address.zipcode} <br /> {dealerships.address.stateCode} </Panel> <br /> </div>
-            })
-              :
-              null
-            }
 
-      </Accordion>
+          <Accordion>
+            {dealerships.franchises ?
+              dealerships.franchises.map(
+                function(dealerships, i) {
+                  return <div className="dealer" key={i}> <Panel header={dealerships.name} eventKey="1" bsStyle="primary">
+                <b>Address:</b> <br />
+                {dealerships.address.street} <br />
+              {dealerships.address.city} <br /> {dealerships.address.county}  {dealerships.address.stateCode} {dealerships.address.zipcode} </Panel> <br /> </div>
+                })
+                  :
+                  null
+                }
+          </Accordion>
       </div>
     )
   }
