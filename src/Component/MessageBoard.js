@@ -32,15 +32,16 @@ class MessageBoard extends Component {
      return (
       <div className="main">
         <Header />
-        <div className="mbutton">
         <Button className="viewAllClick" bsStyle="primary" onClick={this.viewAllClick.bind(this)}>All Posts</Button>
-        </div>
+
           <ol className="postStyle">
           {post.map(function (post, index) {
             return <li className="messageStyle" key={index}>{post.name}<br></br> {post.email} <br></br> {post.message}
               <br></br>
-              <DeletePost post={post} />
-              <UpdatePost />
+
+              <DeletePost className="DeletePost" post={post} />
+              <UpdatePost className="UpdatePost" />
+
 
             </li>
 

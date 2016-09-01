@@ -1,15 +1,11 @@
-.mButton {
-margin-left: -500px;
-}
-
 .viewAllClick {
   display: flex;
-  align-items: center;
+  margin: 0 auto;
   margin-bottom: 25px;
 }
 
 .postStyle {
-display: inline-flex;
+  display: inline-flex;
 }
 
 .messageStyle {
@@ -28,3 +24,5 @@ display: inline-flex;
   /*border: 3px solid #A3A3A3;*/
   border-radius: 20px;
 }
+
+
