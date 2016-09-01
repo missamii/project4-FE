@@ -4,6 +4,7 @@ import Header from './Header.js';
 import MessageParts from './MessageParts.js'
 
 
+
 class NewPost extends Component {
 
 
