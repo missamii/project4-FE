@@ -13,6 +13,13 @@
   /*border: 3px solid #A3A3A3;*/
   border-radius: 20px;
 }
+.OutPut {
+  border: none;
+  background-color: rgba(245, 245, 245, 0.5);
+  width: 700px;
+  margin-left: 370px;
+  padding-bottom: 50px;
+}
 .inputboxes {
   padding-top: 20px;
   display: block;
@@ -35,4 +42,9 @@
   text-align: center;
   color: white;
   margin-bottom: 50px;
+}
+.para {
+  height: 400px;
+  width: 400px;
+  background-color: blue;
 }
