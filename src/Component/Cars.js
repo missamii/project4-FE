@@ -17,13 +17,13 @@ class Cars extends Component {
   searchCar(e) {
        helpers.getOne(this.state.car)
        .then((res) => {
+        console.log("this is:", res.data)
         // const cleanData = res.data.introduction.replace(/<\/?[^>]+>/gi, '');
         this.setState({
         // response: res.data.introduction.replace(/<\/?[^>]+>/gi, '')
         response: res.data
-      });
+      })
       console.log('inside serachcar funcion', this.state.response);
-
     });
   }
 
@@ -46,6 +46,7 @@ class Cars extends Component {
         <Button bsStyle="primary" bsSize="small" className="button" onClick={this.searchCar.bind(this)}>Cars</Button>
     </div>
             <br />   <br />   <br />   <br />
+
 
           <PanelGroup defaultActiveKey="10" accordion>
 
