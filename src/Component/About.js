@@ -45,9 +45,9 @@ class About extends Component {
       <div className="About">
         <Header />
           <div className="aboutDiv">
-            <h1>About [About Name Here]</h1>
+            <h1>About CarFetch</h1>
             <p>
-            This App out of many, was created for our final project. We wanted to make car shopping easier and more relaxed. This App brings your current and relevant information about the car of your dreams. You can shop different dealerships near you, find a vehicle by the make, model, year or the reviews. Use Reviews to find out what other people are saying about a particular vehicle or the best dealership to shop.
+            The CarFetch App out of many, was created for our final project. We wanted to make car shopping easier and more relaxed. This App brings your current and relevant information about the car of your dreams. You can shop different dealerships near you, find a vehicle by the make, model, year or the reviews. Use Reviews to find out what other people are saying about a particular vehicle or the best dealership to shop.
             </p>
             <div className="carrowCard">
               <img src="http://i64.tinypic.com/1z6qovb.jpg" />
