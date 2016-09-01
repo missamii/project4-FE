@@ -2,6 +2,7 @@ import React, { Component } from  'react';
 import Header from './Header.js'
 import helpers from '../utils/helpers.js';
 import { FormGroup, FormControl, FieldGroup, Form, Button, InputGroup, Modal } from 'react-bootstrap';
+import '../UpdatePost.css';
 
 
 class UpdatePost extends Component {
@@ -59,7 +60,7 @@ class UpdatePost extends Component {
     console.log(updates);
     let close = () => this.setState({ show: false});
     return(
-      <div className="model-container" sytle={{height: 200}} >
+      <div className="model-container" style={{height: 200}} >
         <Button
           bsStyle="primary" onClick={() => this.setState({ show: true})}>Edit Post</Button>
           <Modal show={this.state.show} onHide={close} container={this} aria-labelledby="contained-modal-title">
