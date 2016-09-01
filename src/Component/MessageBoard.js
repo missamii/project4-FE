@@ -4,6 +4,7 @@ import Header from './Header.js';
 import { Button } from 'react-bootstrap';
 import DeletePost from './DeletePost.js'
 import UpdatePost from './UpdatePost.js'
+import '../MessageBoard.css'
 
 
 class MessageBoard extends Component {
@@ -31,10 +32,10 @@ class MessageBoard extends Component {
      return (
       <div className="main">
         <Header />
-
+        <div className="mbutton">
         <Button className="viewAllClick" bsStyle="primary" onClick={this.viewAllClick.bind(this)}>All Posts</Button>
-
-          <ol className="olStyle">
+        </div>
+          <ol className="postStyle">
           {post.map(function (post, index) {
             return <li className="messageStyle" key={index}>{post.name}<br></br> {post.email} <br></br> {post.message}
               <br></br>
