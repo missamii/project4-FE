@@ -5,7 +5,7 @@ export default {
   getOne: function(car){
 
     const method = 'post';
-    const url = 'http://localhost:3000/cars';
+    const url = 'http://intense-thicket-50134.herokuapp.com/cars';
     const dataObj = {name: car};
 
   return axios({
@@ -18,7 +18,7 @@ export default {
     getThis: function(zipcode, car){
 
     const method = 'post';
-    const url = 'http://localhost:3000/dealerships';
+    const url = 'http://intense-thicket-50134.herokuapp.com/dealerships';
     const dataObj = {zipcode: zipcode, make: car};
 
   return axios({
@@ -29,17 +29,17 @@ export default {
   },
 
   addNew: function(message) {
-  return axios.post('http://localhost:3000/message/new', message)
+  return axios.post('http://intense-thicket-50134.herokuapp.com/message/new', message)
 },
 
 
   getAll: function() {
-    return axios.get('http://localhost:3000/messages')
+    return axios.get('http://intense-thicket-50134.herokuapp.com/messages')
   },
 
   delete: function(id) {
   console.log(id.post.id);
-  return axios.delete('http://localhost:3000/messages/' + id.post.id)
+  return axios.delete('http://intense-thicket-50134.herokuapp.com/messages/' + id.post.id)
 },
 
   // update: function(name, post){
@@ -61,7 +61,7 @@ export default {
   // }
 
   update: function(name, data) {
-    return axios.put('http://localhost:3000/messages/'+ name, data)
+    return axios.put('http://intense-thicket-50134.herokuapp.com/messages/'+ name, data)
   }
 
 }

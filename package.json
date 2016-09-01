@@ -22,7 +22,7 @@
     "react-router-bootstrap": "^0.23.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node Server.js",
     "build": "react-scripts build",
     "eject": "react-scripts eject"
   },
