@@ -9,7 +9,7 @@ class Home extends Component {
   render() {
     return (
       <div className="wrapper">
-        <Jumbotron>
+        <Jumbotron className="Home">
           <h1>Welcome [APP NAME]</h1>
           <p>
             <iframe className="iframe" id="ytplayer" type="text/html" width="640" height="390"

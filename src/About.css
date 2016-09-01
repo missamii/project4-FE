@@ -1,0 +1,17 @@
+.About {
+  margin: 0 auto;
+  text-align: center;
+}
+.aboutDiv {
+  border: none;
+  background-color: rgba(245, 245, 245, 0.5);
+  width: 500px;
+  margin-left: 370px;
+  padding-bottom: 50px;
+}
+.modal-container {
+  position: relative;
+}
+.modal-container .modal, .modal-container .modal-backdrop {
+  position: absolute;
+}
