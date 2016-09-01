@@ -63,7 +63,7 @@ class UpdatePost extends Component {
         <Button
           bsStyle="primary" onClick={() => this.setState({ show: true})}>Edit Post</Button>
           <Modal show={this.state.show} onHide={close} container={this} aria-labelledby="contained-modal-title">
-          <form>
+          <form className="updateForm">
            <FormGroup controlId="formControlsText">
               <FormControl placeholder="Existing Name" onChange={this.handleOldName.bind(this)} />
             </FormGroup>
@@ -83,12 +83,14 @@ class UpdatePost extends Component {
               <FormControl placeholder="Message" componentClass="textarea" onChange={this.handleNewMessage.bind(this)} />
             </FormGroup>
 
-            <Button bsStyle="danger" onClick={(event) => this.handleUpdatedPost(event)}>Update Post</Button>
-          </form>
+            <Button clasName="upPostB" bsStyle="danger" onClick={(event) => this.handleUpdatedPost(event)}>Update Post</Button>
+
           <Modal.Footer>
           <Button onClick={close}>Close</Button>
           </Modal.Footer>
+          </form>
         </Modal>
+
 
       </div>
     )
