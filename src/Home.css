@@ -1,14 +1,17 @@
 .Home {
   background-color: rgba(245, 245, 245, 0.5);
   height: 620px;
-  margin-top: 50px;
+  /*margin-top: 10px;*/
   /*padding-bottom: 60px;*/
+  padding: 5px;
 }
 .wrapper {
   width: 960px;
   margin: 0 auto;
   text-align: center;
+  margin-top: 20px;
   margin-top: 50px;
+  /*padding-top: -10px;*/
 }
 .iframe {
   border-radius: 10px;
