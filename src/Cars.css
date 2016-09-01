@@ -36,3 +36,8 @@
   color: white;
   margin-bottom: 50px;
 }
+
+.panel {
+  background-color: transparent;
+  border-color: transparent;
+}

@@ -48,13 +48,13 @@ class Cars extends Component {
             <br />   <br />   <br />   <br />
 
 
-          <PanelGroup defaultActiveKey="10" accordion>
+          <PanelGroup className="panel" defaultActiveKey="10" accordion>
 
-            <Panel header={cars.title ? cars.title : null} eventKey="1">
+            <Panel className="panel" header={cars.title ? cars.title : null} eventKey="1">
               {cars.introduction ? cars.introduction.replace(/<\/?[^>]+>/gi, '') : null}
             </Panel>
 
-            <Panel header={cars.link ? cars.link.href : null}>
+            <Panel className="panel" header={cars.link ? cars.link.href : null}>
             </Panel>
 
           </PanelGroup>
