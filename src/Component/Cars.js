@@ -47,7 +47,7 @@ class Cars extends Component {
     </div>
             <br />   <br />   <br />   <br />
 
-          <PanelGroup defaultActiveKey="2" accordion>
+          <PanelGroup defaultActiveKey="10" accordion>
 
             <Panel header={cars.title ? cars.title : null} eventKey="1">
               {cars.introduction ? cars.introduction.replace(/<\/?[^>]+>/gi, '') : null}
