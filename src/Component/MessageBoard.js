@@ -32,7 +32,7 @@ class MessageBoard extends Component {
       <div className="main">
         <Header />
 
-        <button onClick={this.viewAllClick.bind(this)}>All Posts</button>
+        <Button className="viewAllClick" bsStyle="primary" onClick={this.viewAllClick.bind(this)}>All Posts</Button>
 
           <ol className="olStyle">
           {post.map(function (post, index) {

@@ -61,7 +61,7 @@ class UpdatePost extends Component {
     return(
       <div className="model-container" sytle={{height: 200}} >
         <Button
-          bsStyle="primary" bsSize="large" onClick={() => this.setState({ show: true})}>Edit Post</Button>
+          bsStyle="primary" onClick={() => this.setState({ show: true})}>Edit Post</Button>
           <Modal show={this.state.show} onHide={close} container={this} aria-labelledby="contained-modal-title">
           <form>
            <FormGroup controlId="formControlsText">
