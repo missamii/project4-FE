@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import SearchCars from './SearchCars.js'
 import helpers from '../utils/helpers.js';
-import { Button, Row, Grid, Col, Panel, PanelGroup, title, Form } from 'react-bootstrap';
+import { Button, Panel, PanelGroup } from 'react-bootstrap';
 import '../Cars.css'
 
 
@@ -41,11 +41,9 @@ class Cars extends Component {
     return(
     <div className="Cars">
 
-    <div className="input">
-      <Form inline>
+    <div className="inputboxes">
         <input type="text" onChange={this.handleChange.bind(this)}></input> &nbsp;
         <Button bsStyle="primary" bsSize="small" className="button" onClick={this.searchCar.bind(this)}>Cars</Button>
-      </Form>
     </div>
             <br />   <br />   <br />   <br />
 

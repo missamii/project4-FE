@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import SearchCars from './SearchCars.js'
 import helpers from '../utils/helpers.js';
-import { Button } from 'react-bootstrap';
+import { Button, Panel, Accordion } from 'react-bootstrap';
 import Header from './Header.js'
 import '../Cars.css'
 
@@ -53,21 +53,23 @@ class Dealerships extends Component {
           <input className='input' type='text' placeholder='make' onChange={this.handleChangeCar.bind(this)}></input> &nbsp;
           <input className='input' type='text' placeholder='zipcode' onChange={this.handleChangeZip.bind(this)}></input> &nbsp;
           <Button bsStyle="primary" bsSize="small" onClick={this.searchDealers.bind(this)}>Dealerships</Button>
-
+          <br />
         </div>
-        <ol>
+
+      <Accordion>
         {dealerships.franchises ?
           dealerships.franchises.map(
             function(dealerships, i) {
-              return <div className="dealer" key={i}> {dealerships.name} <br />
-              {dealerships.address.street} <br />
-            {dealerships.address.city} <br /> {dealerships.address.county} <br /> {dealerships.address.zipcode} <br /> {dealerships.address.stateCode} <br /> <br /> </div>
+              return <div className="dealer" key={i}> <Panel header={dealerships.name} eventKey="1" bsStyle="primary">
+            <b>Address:</b> <br />
+            {dealerships.address.street}<br />
+            {dealerships.address.city} <br /> {dealerships.address.county} <br /> {dealerships.address.zipcode} <br /> {dealerships.address.stateCode} </Panel> <br /> </div>
             })
               :
               null
             }
 
-          </ol>
+      </Accordion>
       </div>
     )
   }
