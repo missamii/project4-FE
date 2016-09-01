@@ -1,6 +1,8 @@
 import React, { Component } from  'react';
 import Header from './Header.js'
 import helpers from '../utils/helpers.js';
+import { FormGroup, FormControl, FieldGroup, Form, Button, InputGroup, Modal } from 'react-bootstrap';
+
 
 
 class DeletePost extends Component {
@@ -21,7 +23,7 @@ class DeletePost extends Component {
     return(
       <div className="DeletePost">
 
-      <button  onClick={(event)=>this.handleDelete(event)}>Delete</button>
+      <Button bsStyle="danger"  onClick={(event)=>this.handleDelete(event)}>Delete</Button>
 
       </div>
     )
