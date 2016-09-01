@@ -19,8 +19,8 @@ class Home extends Component {
           <p>
             <Button bsStyle="danger" bsSize="large" className="enter" href="/SearchCars">&nbsp; &nbsp; &nbsp; Enter  &nbsp; &nbsp; &nbsp;</Button>
           </p>
-</Jumbotron>
-    </div>
+        </Jumbotron>
+      </div>
 
 
     )
