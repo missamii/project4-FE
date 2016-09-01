@@ -30,3 +30,9 @@
   margin: 0 auto;
   margin-left: 40px;
 }
+
+.NotFound {
+  text-align: center;
+  color: white;
+  margin-bottom: 50px;
+}
