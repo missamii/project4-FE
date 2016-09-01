@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header.js';
 import { FormGroup, FormControl, FieldGroup, Form, Button, InputGroup } from 'react-bootstrap';
+import '../MessageParts.css'
 
 
 class MessageBoard extends Component {
@@ -36,10 +37,9 @@ constructor(props) {
 
   render() {
     return (
-      <div>
-        <h1>Message Board</h1>
-
-        <form>
+      <div className="FormDiv">
+        <form className="form">
+          <h2>Message Board</h2>
           <FormGroup controlId="formControlsText">
             <FormControl placeholder="Name" onChange={(event) => this.addName(event)} />
           </FormGroup>
@@ -61,7 +61,6 @@ constructor(props) {
 
           <Button bsStyle="danger" onClick={(event) => this.props.add(event, this.state)}>Add a Post</Button>
         </form>
-
       </div>
     )
   }
