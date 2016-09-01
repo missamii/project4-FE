@@ -10,7 +10,7 @@ class Home extends Component {
     return (
       <div className="wrapper">
         <Jumbotron className="Home">
-          <h1>Welcome [APP NAME]</h1>
+          <h1>CarFetch</h1>
           <p>
             <iframe className="iframe" id="ytplayer" type="text/html" width="700" height="390" frameBorder="70px"
         src="https://www.youtube.com/embed/wT-4nESh-4Y?autoplay=1&controls=0&showinfo=0"
