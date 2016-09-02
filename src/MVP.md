@@ -4,10 +4,10 @@
 - [x] React FE
 - [x] Routing
 - [x] Build main Component
-- [ ] deployment
+- [x] deployment
 - [x] Hit API
-- [ ] Do CRUD
-- [ ] CSS it UP
+- [x] Do CRUD
+- [x] CSS it UP
 
 
 |         Schedule              |

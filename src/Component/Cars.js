@@ -13,11 +13,7 @@ class Cars extends Component {
       car: "",
       response: []
     };
-
   }
-
-
-
   searchCar(e) {
        helpers.getOne(this.state.car)
        .then((res) => {
@@ -30,7 +26,6 @@ class Cars extends Component {
       console.log('inside serachcar funcion', this.state.response);
     });
   }
-
 
   handleChange(event){
     console.log(event.target.value);
@@ -53,13 +48,13 @@ class Cars extends Component {
             <br />   <br />   <br />   <br />
 
 
-          <PanelGroup className="panel" defaultActiveKey="10" accordion>
+          <PanelGroup defaultActiveKey="10" accordion>
 
-            <Panel className="panel" header={cars.title ? cars.title : null} eventKey="1">
+            <Panel header={cars.title ? cars.title : null} eventKey="1">
               {cars.introduction ? cars.introduction.replace(/<\/?[^>]+>/gi, '') : null}
             </Panel>
 
-            <Panel className="panel" header={cars.link ? cars.link.href : null}>
+            <Panel header={cars.link ? cars.link.href : null}>
             </Panel>
 
           </PanelGroup>
