@@ -1,13 +1,13 @@
-# MVP Checklist: A car shopping App [Needs a name]
+# MVP Checklist: A car shopping App [CarFetch]
 ---
 - [x] Rails BE
 - [x] React FE
 - [x] Routing
 - [x] Build main Component
-- [ ] deployment
+- [x] deployment
 - [x] Hit API
-- [ ] Do CRUD
-- [ ] CSS it UP
+- [x] Do CRUD
+- [x] CSS it UP
 
 
 |         Schedule              |
