@@ -50,7 +50,7 @@ class About extends Component {
             The CarFetch App out of many, was created for our final project. We wanted to make car shopping easier and more relaxed. This App brings your current and relevant information about the car of your dreams. You can shop different dealerships near you, find a vehicle by the make, model, year or the reviews. Use Reviews to find out what other people are saying about a particular vehicle or the best dealership to shop.
             </p>
             <div className="carrowCard">
-              <img src="http://i64.tinypic.com/1z6qovb.jpg" />
+              <img src="http://i63.tinypic.com/2ngflz9.png" />
               <Modal show={this.state.showModalCarrow} onHide={() => this.closeModal('carrow')}>
                 <Modal.Header closeButton>
                   <Modal.Title className='title'>Carrow Thibault</Modal.Title>
@@ -73,7 +73,7 @@ class About extends Component {
                <br />  <br /> <br />
 
           <div className="tiffanyCard">
-            <img src="http://i64.tinypic.com/1z6qovb.jpg" />
+            <img src="http://i63.tinypic.com/a425p5.jpg" />
             <Modal show={this.state.showModalTiffany} onHide={() => this.closeModal('tiffany')}>
                 <Modal.Header closeButton>
                   <Modal.Title className='title'>Tiffany Lo</Modal.Title>
