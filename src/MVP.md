@@ -1,4 +1,4 @@
-# MVP Checklist: A car shopping App [Needs a name]
+# MVP Checklist: A car shopping App [CarFetch]
 ---
 - [x] Rails BE
 - [x] React FE
