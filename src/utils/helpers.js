@@ -5,7 +5,7 @@ export default {
   getOne: function(car){
 
     const method = 'post';
-    const url = 'https://mighty-anchorage-52102.herokuapp.com/cars';
+    const url = 'http://mighty-anchorage-52102.herokuapp.com/cars';
     const dataObj = {name: car};
 
   return axios({
@@ -18,7 +18,7 @@ export default {
     getThis: function(zipcode, car){
 
     const method = 'post';
-    const url = 'https://mighty-anchorage-52102.herokuapp.com/dealerships';
+    const url = 'http://mighty-anchorage-52102.herokuapp.com/dealerships';
     const dataObj = {zipcode: zipcode, make: car};
 
   return axios({
