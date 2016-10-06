@@ -26,7 +26,6 @@ class SearchCars extends Component {
 }
 
 
-
         //         {
         //   this.state.res.length
         //   ?
