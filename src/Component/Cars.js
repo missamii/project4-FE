@@ -42,7 +42,7 @@ class Cars extends Component {
     <div className="Cars">
 
     <div className="inputboxes">
-        <input type="text" onChange={this.handleChange.bind(this)}></input> &nbsp;
+        <input type="text" placeholder="Ferrari" onChange={this.handleChange.bind(this)}></input> &nbsp;
         <Button bsStyle="primary" bsSize="small" className="button" onClick={this.searchCar.bind(this)}>Cars</Button>
     </div>
             <br />   <br />   <br />   <br />
